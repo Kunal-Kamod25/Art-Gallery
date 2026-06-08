@@ -7,7 +7,7 @@ import api from '../../lib/api';
 import { useAuthStore } from '../../lib/store';
 
 export default function ProfilePage() {
-  const { user, setUser } = useAuthStore();
+  const { user, updateUser } = useAuthStore();
   const router = useRouter();
   const [profile, setProfile] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
@@ -59,11 +59,13 @@ export default function ProfilePage() {
     try {
       const { data } = await api.put('/auth/profile', formData);
       setProfile(data.user);
-      setUser(data.user);
+      updateUser(data.user);  // sync updated user into Zustand store
       setIsEditing(false);
-      toast.success('Profile updated successfully');
+      toast.success('Profile updated successfully!');
     } catch (error) {
-      toast.error('Failed to update profile');
+      const msg = error.response?.data?.message || 'Failed to update profile';
+      toast.error(msg);
+      console.error('Profile update error:', error);
     }
   };
 
