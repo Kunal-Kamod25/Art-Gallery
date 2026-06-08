@@ -46,7 +46,7 @@ export default function LoginPage() {
           </h2>
           
           <p className="text-neutral-500 text-lg mb-12 leading-relaxed">
-            Luminary is the premier destination for discovering extraordinary art and connecting with creators globally.
+            Kalakriti is the premier destination for discovering extraordinary art and connecting with creators globally.
           </p>
 
           <div className="glass-card p-6 rounded-2xl border-white/5 bg-white/5">
@@ -70,7 +70,7 @@ export default function LoginPage() {
               <div className="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
                 <Sparkles className="text-white" size={20} />
               </div>
-              <span className="font-display text-2xl font-bold tracking-tight text-white">LUMINARY</span>
+              <span className="font-display text-2xl font-bold tracking-tight text-white">KALAKRITI</span>
             </Link>
 
             <h1 className="text-4xl font-bold mb-2 tracking-tight">Sign <span className="text-amber-500">In</span></h1>

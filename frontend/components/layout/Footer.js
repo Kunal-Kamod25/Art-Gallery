@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-neutral-950 text-neutral-300">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
-          <h2 className="font-display text-3xl text-white font-bold tracking-widest mb-4">LUMINARY</h2>
+          <h2 className="font-display text-3xl text-white font-bold tracking-widest mb-4">KALAKRITI</h2>
           <p className="text-sm text-neutral-400 leading-relaxed max-w-sm">
             A curated space where extraordinary art meets passionate collectors. We champion emerging and established artists worldwide.
           </p>
@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-neutral-800 px-6 py-5 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500 max-w-7xl mx-auto">
-        <p>© {new Date().getFullYear()}  Luminary Art Gallery. All rights reserved.</p>
+        <p>© {new Date().getFullYear()}  Kalakriti Art Gallery. All rights reserved.</p>
         <div className="flex gap-5 mt-2 md:mt-0">
           <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
           <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>

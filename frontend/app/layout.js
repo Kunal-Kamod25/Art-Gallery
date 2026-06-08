@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Luminary Art Gallery</title>
+        <title>Kalakriti Art Gallery</title>
         <meta name="description" content="Discover extraordinary art from world-class artists" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

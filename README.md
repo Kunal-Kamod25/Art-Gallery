@@ -1,14 +1,14 @@
-# 🎨 Luminary Art Gallery
+# 🎨 Kalakriti Art Gallery
 
 A professional, production-ready full-stack Online Art Gallery Management System built as a feature-rich, high-performance platform for artists and art collectors.
 
-Luminary Art Gallery serves as a digital bridge between creative artists looking to showcase and monetize their masterpieces, and art collectors seeking unique digital and physical artworks.
+Kalakriti Art Gallery serves as a digital bridge between creative artists looking to showcase and monetize their masterpieces, and art collectors seeking unique digital and physical artworks.
 
 ---
 
 ## 🚀 Overview of the Project
 
-Luminary Art Gallery features a robust architecture combining a Next.js frontend with an Express/Node.js backend, powered by MongoDB for relational-like document persistence and AWS S3 for secure, highly scalable image hosting.
+Kalakriti Art Gallery features a robust architecture combining a Next.js frontend with an Express/Node.js backend, powered by MongoDB for relational-like document persistence and AWS S3 for secure, highly scalable image hosting.
 
 ### Key Capabilities:
 *   **🖼️ Dynamic Interactive Gallery:** Advanced multi-dimensional filtering by category, artist, price range, and search terms.

@@ -192,7 +192,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center text-white max-w-2xl mx-auto px-6">
           <p className="text-amber-400 tracking-widest text-xs uppercase mb-4">Are You An Artist?</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Share Your Vision With the World</h2>
-          <p className="text-neutral-300 mb-8">Join our community of world-class artists. Apply to exhibit your work in the Luminary Gallery.</p>
+          <p className="text-neutral-300 mb-8">Join our community of world-class artists. Apply to exhibit your work in the Kalakriti Gallery.</p>
           <Link href="/auth/register" className="btn-gold text-sm tracking-widest uppercase inline-flex items-center gap-2">
             Apply Now <ArrowRight size={16} />
           </Link>

@@ -36,7 +36,7 @@ export default function RegisterPage() {
     setLoading(true);
     try {
       await register(form.name, form.email, form.password, form.role);
-      toast.success('Account created! Welcome to Luminary.');
+      toast.success('Account created! Welcome to Kalakriti.');
       router.push('/');
     } catch (err) {
       toast.error(err.response?.data?.message || 'Registration failed');
@@ -57,7 +57,7 @@ export default function RegisterPage() {
               <div className="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:scale-110 transition-transform">
                 <Sparkles className="text-white" size={20} />
               </div>
-              <span className="font-display text-2xl font-bold tracking-tight">LUMINARY</span>
+              <span className="font-display text-2xl font-bold tracking-tight">KALAKRITI</span>
             </Link>
 
             <h1 className="text-4xl font-bold mb-2 tracking-tight">Create <span className="text-amber-500">account</span></h1>
