@@ -18,7 +18,7 @@ const s3 = new S3Client({
 const storage = multerS3({
   s3: s3,
   bucket: process.env.AWS_S3_BUCKET_NAME,
-  acl: 'public-read',
+  // No ACL - bucket uses policy-based public access instead
 
   // Generate unique filename for each upload
   key: function (req, file, cb) {
