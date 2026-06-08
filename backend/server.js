@@ -5,7 +5,28 @@ const connectDB = require('./config/db');
 const path = require('path');
 
 dotenv.config();
-connectDB();
+
+// Connect DB and auto-seed categories if empty
+connectDB().then(async () => {
+  try {
+    const Category = require('./models/Category');
+    const count = await Category.countDocuments();
+    if (count === 0) {
+      await Category.insertMany([
+        { name: 'Painting',     description: 'Traditional and modern paintings',    slug: 'painting'     },
+        { name: 'Sculpture',    description: 'Three-dimensional artworks',           slug: 'sculpture'    },
+        { name: 'Photography',  description: 'Fine art photography',                 slug: 'photography'  },
+        { name: 'Digital Art',  description: 'Digital and NFT artworks',             slug: 'digital-art'  },
+        { name: 'Drawing',      description: 'Sketches and illustrations',           slug: 'drawing'      },
+        { name: 'Printmaking',  description: 'Lithographs, etchings, and prints',    slug: 'printmaking'  },
+        { name: 'Mixed Media',  description: 'Works combining multiple art forms',   slug: 'mixed-media'  },
+      ]);
+      console.log('✅ Default categories seeded automatically.');
+    }
+  } catch (err) {
+    console.error('⚠️  Auto-seed categories failed:', err.message);
+  }
+});
 
 const app = express();
 
