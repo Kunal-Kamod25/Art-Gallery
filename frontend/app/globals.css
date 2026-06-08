@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #b8922a;
+  --dark: #0f0f0f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fafaf8;
+  color: #1a1a1a;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-neutral-900 text-white px-6 py-3 font-medium tracking-wide hover:bg-neutral-700 transition-all duration-300;
+  }
+  .btn-gold {
+    @apply bg-amber-600 text-white px-6 py-3 font-medium tracking-wide hover:bg-amber-700 transition-all duration-300;
+  }
+  .btn-outline {
+    @apply border border-neutral-900 text-neutral-900 px-6 py-3 font-medium tracking-wide hover:bg-neutral-900 hover:text-white transition-all duration-300;
+  }
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-1;
+  }
+  .section-title {
+    @apply text-4xl md:text-5xl font-display font-bold text-neutral-900 leading-tight;
+  }
+  .section-subtitle {
+    @apply text-lg text-neutral-500 font-light mt-3 max-w-2xl;
+  }
+  .input-field {
+    @apply w-full border border-neutral-200 px-4 py-3 focus:outline-none focus:border-neutral-900 transition-colors bg-white;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+  }
+
+  .glass-input {
+    @apply w-full bg-white/5 border border-white/10 px-4 py-3.5 text-white placeholder:text-neutral-500 focus:outline-none focus:border-amber-500/50 focus:bg-white/10 transition-all rounded-lg;
+  }
+
+  .glass-button {
+    @apply bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3.5 rounded-lg transition-all active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+}
+
+.artwork-card:hover .artwork-overlay { opacity: 1; }
+.artwork-overlay { transition: opacity 0.4s ease; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c5a028; border-radius: 3px; }
+
+/* Swiper overrides */
+.swiper-pagination-bullet-active { background: #b8922a !important; }
