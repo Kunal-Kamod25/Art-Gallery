@@ -1,14 +1,15 @@
 const Artwork = require('../models/Artwork');
 const Artist = require('../models/Artist');
 const { s3 } = require('../config/s3');
+const { DeleteObjectCommand } = require('@aws-sdk/client-s3');
 const asyncHandler = require('express-async-handler');
 
 const deleteFromS3 = async (key) => {
   if (!key || !process.env.AWS_S3_BUCKET_NAME) return;
-  await s3.deleteObject({
+  await s3.send(new DeleteObjectCommand({
     Bucket: process.env.AWS_S3_BUCKET_NAME,
     Key: key,
-  }).promise();
+  }));
 };
 
 exports.getArtworks = asyncHandler(async (req, res) => {
