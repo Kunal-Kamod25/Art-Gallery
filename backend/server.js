@@ -20,8 +20,25 @@ const allowedOrigins = [
   'http://127.0.0.1:3003',
 ];
 
+if (process.env.FRONTEND_URL) {
+  allowedOrigins.push(process.env.FRONTEND_URL);
+  // Also push variant without trailing slash if present
+  const urlWithoutSlash = process.env.FRONTEND_URL.replace(/\/$/, "");
+  if (!allowedOrigins.includes(urlWithoutSlash)) {
+    allowedOrigins.push(urlWithoutSlash);
+  }
+}
+
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function (origin, callback) {
+    // allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin: ' + origin;
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
   credentials: true
 }));
 app.use(express.json());
