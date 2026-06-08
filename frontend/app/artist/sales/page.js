@@ -114,7 +114,7 @@ export default function ArtistSalesPage() {
             <div className="p-12 text-center">
               <Package size={48} className="text-neutral-300 mx-auto mb-4" />
               <h3 className="font-display text-lg font-semibold text-neutral-900 mb-2">No sales yet</h3>
-              <p className="text-neutral-600">Your artworks haven't been purchased yet. Keep creating!</p>
+              <p className="text-neutral-600">Your artworks haven&apos;t been purchased yet. Keep creating!</p>
             </div>
           ) : (
             <div className="overflow-x-auto">

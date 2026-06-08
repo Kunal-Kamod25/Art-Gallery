@@ -264,7 +264,7 @@ export default function RegisterPage() {
           </h2>
           
           <p className="text-neutral-400 text-lg mb-12 leading-relaxed">
-            Everything you need to <span className="text-amber-400 font-semibold">explore, trade, and showcase</span> extraordinary artworks from the world's most talented creators.
+            Everything you need to <span className="text-amber-400 font-semibold">explore, trade, and showcase</span> extraordinary artworks from the world&apos;s most talented creators.
           </p>
 
           {/* Feature Cards */}

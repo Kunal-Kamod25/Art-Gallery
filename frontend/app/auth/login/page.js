@@ -51,7 +51,7 @@ export default function LoginPage() {
 
           <div className="glass-card p-6 rounded-2xl border-white/5 bg-white/5">
             <p className="text-neutral-400 italic text-sm">
-              "Art washes away from the soul the dust of everyday life."
+              &ldquo;Art washes away from the soul the dust of everyday life.&rdquo;
             </p>
             <p className="text-amber-500 text-xs font-bold mt-3 tracking-widest uppercase">— Pablo Picasso</p>
           </div>
